@@ -8,4 +8,8 @@ at least when using java.
 
 This is an attempt to solve the leet code challenges with immutability and functional approach as first principle using Java 18 
 
-# 1. Implement a data structure that mimics stack with one added functionality : getMin() return the minimum of the stored value
+## 1. Implement a data structure that mimics stack with one added functionality : getMin() return the minimum of the stored value.
+### requirement is getMin should have a cost of O(1)
+link to code see [Stack Like](src/main/example/Ch001StackLike.java)
+
+
