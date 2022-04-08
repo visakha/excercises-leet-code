@@ -1,0 +1,10 @@
+/.idea/
+/.idea/misc.xml
+/.idea/libraries
+.idea
+libraries
+
+
+# maven project related ignore files and directories
+.mvn/
+target/
