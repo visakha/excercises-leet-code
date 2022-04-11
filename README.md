@@ -16,7 +16,7 @@ This is an attempt to solve the leet code challenges with readbility and functio
 requirement: getMin should have a cost of O(1)
 link to code see [Stack Like](src/main/example/Ch001StackLike.java)
 
-## 2. https://leetcode.com/problems/two-sum/
+## 2. leetcode /problems/two-sum/
 requirement: 
   - given an array get the indexes who sum of values equals target
   - O(n sqrd) at the most
