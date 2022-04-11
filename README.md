@@ -13,7 +13,19 @@ This is an attempt to solve the leet code challenges with readbility and functio
 
 # Chapters
 ## 1. Implement a data structure that mimics stack with one added functionality : getMin() returna the minimum of the stored value.
-### requirement is getMin should have a cost of O(1)
+requirement: getMin should have a cost of O(1)
 link to code see [Stack Like](src/main/example/Ch001StackLike.java)
 
+## 2. https://leetcode.com/problems/two-sum/
+requirement: 
+  - given an array get the indexes who sum of values equals target
+  - O(n sqrd) at the most
 
+solution: 
+ see Ch002-two-sum
+ 
+Observation:
+ the leet code approach uses Array directly, here I am using java streams approach on ArrayList
+
+todo next
+https://leetcode.com/problems/3sum/
