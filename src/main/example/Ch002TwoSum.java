@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 
 public class Ch002TwoSum {
     public static void main(String[] args) {
-        var nums = new int[]{2, 7, 11, 5, 4, 15};
+        var nums = new int[]{2, 7, 11, -9, 5, 4, 15, -9, 10};
 
         // test 1
         var target = 9;
@@ -27,6 +27,12 @@ public class Ch002TwoSum {
         target = 18;
         ints = Solution.twoSum(nums, target);
         System.out.println("should be 1, 2 | " + Solution.printIntArray(ints));
+        // test 4
+        target = 1;
+        ints = Solution.twoSum(nums, target);
+        System.out.println("should be 3, 8 | " + Solution.printIntArray(ints));
+
+
     }
 }
 
