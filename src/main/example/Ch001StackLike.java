@@ -2,6 +2,9 @@ package example;
 
 import java.util.Stack;
 
+// Requirement: Implement a data structure that mimics a stack, that provides a method called getMin(), that returns the min of the values stored in container.
+//   next, the cost of getMin() should be O(1)
+    
 class Ch001StackLike {
     public static void main(String[] args) {
             System.out.println("\n\n ------ start ------");
