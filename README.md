@@ -1,4 +1,7 @@
-# Why Immutable objects for the leet code
+# About
+I have a leet code subscription, this is a place for notes and learnings to remember and share 
+
+# What are the approaches
 Most examples and the approach towards solving the leet code challenges emphasis memory and in-place edits over 
  - code readability
  - immutability
@@ -6,9 +9,10 @@ Most examples and the approach towards solving the leet code challenges emphasis
 
 at least when using java.
 
-This is an attempt to solve the leet code challenges with immutability and functional approach as first principle using Java 18 
+This is an attempt to solve the leet code challenges with readbility and functional thinking as an approach 
 
-## 1. Implement a data structure that mimics stack with one added functionality : getMin() return the minimum of the stored value.
+# Chapters
+## 1. Implement a data structure that mimics stack with one added functionality : getMin() returna the minimum of the stored value.
 ### requirement is getMin should have a cost of O(1)
 link to code see [Stack Like](src/main/example/Ch001StackLike.java)
 
