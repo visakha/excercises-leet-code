@@ -7,51 +7,61 @@ package example;
 //  Explanation: The answer is "abc", with the length of 3.
 
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
 public class Ch004LengthOfLongestSubstring {
     public static void main(String[] args) {
         //         test 1
         var stringInput = "abcabcbb";
+        System.out.println("working on |" + stringInput + "|" );
         System.out.println("longest subString wihout repeat : expected 3 | actual :" + Solution_Ch004LengthOfLongestSubstring.lengthOfLongestSubstring(stringInput));
 
         //         test 2
         stringInput = "xyz abcd  mno hhjjuu";
+        System.out.println("working on |" + stringInput + "|" );
         System.out.println("longest subString wihout repeat : expected 8 | actual :" + Solution_Ch004LengthOfLongestSubstring.lengthOfLongestSubstring(stringInput)); //         test 2
 
-        stringInput = "x";
+        stringInput = "x";        System.out.println("working on |" + stringInput + "|" );
         System.out.println("longest subString wihout repeat : expected 1 | actual :" + Solution_Ch004LengthOfLongestSubstring.lengthOfLongestSubstring(stringInput));
 
-        stringInput = "x c";
+        stringInput = "x c";        System.out.println("working on |" + stringInput + "|" );
         System.out.println("longest subString wihout repeat : expected 3 | actual :" + Solution_Ch004LengthOfLongestSubstring.lengthOfLongestSubstring(stringInput));
 
+        stringInput = "aab";        System.out.println("working on |" + stringInput + "|" );
+        System.out.println("longest subString wihout repeat : expected 2 | actual :" + Solution_Ch004LengthOfLongestSubstring.lengthOfLongestSubstring(stringInput));
+
+        stringInput = "dvdf";        System.out.println("working on |" + stringInput + "|" );
+        System.out.println("longest subString wihout repeat : expected 3 | actual :" + Solution_Ch004LengthOfLongestSubstring.lengthOfLongestSubstring(stringInput));
+
+//
     }
 }
 
 
 class Solution_Ch004LengthOfLongestSubstring {
-    public static int lengthOfLongestSubstring(String inputStr) {
-        if (inputStr == null) return 0;
-        if (inputStr.length() == 1) return 1;
+    public static int lengthOfLongestSubstring(String s) {
+        if (s == null) return 0;
+        if (s.length() == 1) return 1;
 
-        var colltdMap = new HashMap<String, Integer>();
-        int res = len(inputStr, 0, 1, "", colltdMap);
-        var res2 = Collections.max( colltdMap.values());
-        return res2;
+        var colltdMap = new ArrayList<String>();
+        len(s, 0, "",  colltdMap);
+        return Collections.max( colltdMap.stream().map(String::length).toList());
     }
 
-    private static int len(String s, int pos, int prevLen, String collectdStr, HashMap<String, Integer> collectdMap) {
+    private static void len(String s, int pos, String collectdStr, List<String> collectdMap) {
         if (pos > (s.length() - 1)) {
-            collectdMap.put(collectdStr, collectdStr.length());
-            return prevLen;
+            collectdMap.add(collectdStr);
+            return ;
         }
         if (collectdStr.contains(s.charAt(pos) + "")) {
-            collectdMap.put(collectdStr, collectdStr.length());
-            return len(s, pos + 1, 1, "", collectdMap);
+            collectdMap.add(collectdStr);
+            len(s, collectdMap.size(),   "", collectdMap);
         }
         else {
-            return len(s, pos + 1, prevLen + 1, collectdStr + s.charAt(pos), collectdMap);
+            len(s, pos + 1,  collectdStr + s.charAt(pos), collectdMap);
         }
     }
 }

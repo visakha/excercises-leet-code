@@ -33,6 +33,13 @@ requirement:
 
 solution: 
  see Ch003-Add-TwoNums-LinkedList
+
+## 4. leetcode /problems/Length Of Longest Substring
+requirement: 
+  - see desc in the solution
+
+solution: 
+ see Ch004-Length-Of-Longest-Substring
  
 
 
