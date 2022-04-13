@@ -27,7 +27,7 @@ solution:
 Observation:
  the leet code approach uses Array directly, here I am using java streams approach on ArrayList
 
-## 2. leetcode /problems/add to nums/
+## 3. leetcode /problems/add to nums/
 requirement: 
   - see desc in the solution
 
