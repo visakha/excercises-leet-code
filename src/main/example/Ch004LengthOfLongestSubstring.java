@@ -46,9 +46,9 @@ class Solution_Ch004LengthOfLongestSubstring {
         if (s == null) return 0;
         if (s.length() == 1) return 1;
 
-        var colltdMap = new ArrayList<String>();
-        len(s, 0, "",  colltdMap);
-        return Collections.max( colltdMap.stream().map(String::length).toList());
+        var colltdList = new ArrayList<String>();
+        len(s, 0, "",  colltdList);
+        return Collections.max( colltdList.stream().map(String::length).toList());
     }
 
     private static void len(String s, int pos, String collectdStr, List<String> collectdMap) {
