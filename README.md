@@ -27,5 +27,15 @@ solution:
 Observation:
  the leet code approach uses Array directly, here I am using java streams approach on ArrayList
 
+## 2. leetcode /problems/add to nums/
+requirement: 
+  - see desc in the solution
+
+solution: 
+ see Ch003-Add-TwoNums-LinkedList
+ 
+
+
+
 todo next
 https://leetcode.com/problems/3sum/
