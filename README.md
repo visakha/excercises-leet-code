@@ -71,6 +71,17 @@ solution:
  see Ch006BestTimeBuySellStock
  
 
+## 6. Valid Parenthesis
+from leetCode
+https://leetcode.com/problems/valid-parentheses/
+
+requirement: 
+    see the link above in leetCode
+    
+solution: 
+ see Ch007ValidParen
+ 
+
 
 
 todo next
