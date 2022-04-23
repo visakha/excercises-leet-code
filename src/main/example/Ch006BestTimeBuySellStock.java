@@ -35,12 +35,11 @@ public class Ch006BestTimeBuySellStock {
 
         if (pos1 == sizeOfList - 1) return prevProfit;
 
-        // sell profit only
         var buyPrice = listOfInt.get(pos1);
         var sellPrice = listOfInt.get(pos2);
 
         var currProfit = sellPrice - buyPrice;
-        if (currProfit > prevProfit.profit)
+        if (currProfit > prevProfit.profit) // sell profit only
             prevProfit = new P3(currProfit, pos1, pos2);
 
         if (pos2 == sizeOfList - 1) {
