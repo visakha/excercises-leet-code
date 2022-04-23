@@ -6,11 +6,6 @@ package example;
 
 // assumptions : values are int and +ve within reasonable higher limit
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
 public class Ch003AddTwoNumsLinkedList {
     public static void main(String[] args) {
 //         test 1
@@ -19,39 +14,36 @@ public class Ch003AddTwoNumsLinkedList {
         ListNode lnThree = new ListNode(3, lnTwo);
 
 
-        System.out.println(Solution_Ch003AddTwoNumsLinkedList.len(lnOne, 0));
-        System.out.println(Solution_Ch003AddTwoNumsLinkedList.len(lnTwo, 0));
-        System.out.println(Solution_Ch003AddTwoNumsLinkedList.len(lnThree, 0));
+        System.out.println(len(lnOne, 0));
+        System.out.println(len(lnTwo, 0));
+        System.out.println(len(lnThree, 0));
 
         // test 2
-        System.out.println(Solution_Ch003AddTwoNumsLinkedList.getNumber(lnThree, 0, 1));
-        System.out.println(Solution_Ch003AddTwoNumsLinkedList.len(9877));
+        System.out.println(getNumber(lnThree, 0, 1));
+        System.out.println(len(9877));
 
         // test 3
-        ListNode ln987 = Solution_Ch003AddTwoNumsLinkedList.getListNode(987);
-        System.out.println(Solution_Ch003AddTwoNumsLinkedList.getNumber(ln987, 0, 1));
+        ListNode ln987 = getListNode(987);
+        System.out.println(getNumber(ln987, 0, 1));
 
         // final test
-        var lnFinalTest = Solution_Ch003AddTwoNumsLinkedList.addTwoNumbers(ln987, lnThree);
-        System.out.println(Solution_Ch003AddTwoNumsLinkedList.getNumber(lnFinalTest, 0, 1));
+        var lnFinalTest = addTwoNumbers(ln987, lnThree);
+        System.out.println(getNumber(lnFinalTest, 0, 1));
 
 
         // other neg test 1
         ListNode lnZre = new ListNode(0);
         ListNode lnZrf = new ListNode(0);
-        var lnFinalTest2 = Solution_Ch003AddTwoNumsLinkedList.addTwoNumbers(lnZre, lnZrf);
-        System.out.println(Solution_Ch003AddTwoNumsLinkedList.getNumber(lnFinalTest2, 0, 1));
+        var lnFinalTest2 = addTwoNumbers(lnZre, lnZrf);
+        System.out.println(getNumber(lnFinalTest2, 0, 1));
 
         // other test 9  & 99991
-        ListNode ln9 = Solution_Ch003AddTwoNumsLinkedList.getListNode(9);
-        ListNode ln99991 = Solution_Ch003AddTwoNumsLinkedList.getListNode(99991);
-        var lnFinalTest3 = Solution_Ch003AddTwoNumsLinkedList.addTwoNumbers(ln9, ln99991);
-        System.out.println(Solution_Ch003AddTwoNumsLinkedList.getNumber(lnFinalTest3, 0, 1));
+        ListNode ln9 = getListNode(9);
+        ListNode ln99991 = getListNode(99991);
+        var lnFinalTest3 = addTwoNumbers(ln9, ln99991);
+        System.out.println(getNumber(lnFinalTest3, 0, 1));
     }
-}
 
-
-class Solution_Ch003AddTwoNumsLinkedList {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int numL1 = getNumber(l1, 0, 1);
         int numL2 = getNumber(l2, 0, 1);
@@ -106,7 +98,9 @@ class Solution_Ch003AddTwoNumsLinkedList {
         return getNumber(l1.next, acc + l1.val * mult, mult * 10);
     }
 
+
 }
+
 
 // this from leet code : Definition for singly-linked list.
 // @formatter:off

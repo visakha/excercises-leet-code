@@ -6,7 +6,6 @@ package example;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.IntPredicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -16,27 +15,26 @@ public class Ch002TwoSum {
 
         // test 1
         var target = 9;
-        int[] ints = Solution.twoSum(nums, target);
-        System.out.println("should be 0,1 | " + Solution.printIntArray(ints));
+        int[] ints = twoSum(nums, target);
+        System.out.println("should be 0,1 | " + printIntArray(ints));
         // test 2
         target = 11;
-        ints = Solution.twoSum(nums, target);
-        System.out.println("should be 1,4 | " + Solution.printIntArray(ints));
+        ints = twoSum(nums, target);
+        System.out.println("should be 1,4 | " + printIntArray(ints));
 
         // test 3
         target = 18;
-        ints = Solution.twoSum(nums, target);
-        System.out.println("should be 1, 2 | " + Solution.printIntArray(ints));
+        ints = twoSum(nums, target);
+        System.out.println("should be 1, 2 | " + printIntArray(ints));
         // test 4
         target = 1;
-        ints = Solution.twoSum(nums, target);
-        System.out.println("should be 3, 8 | " + Solution.printIntArray(ints));
+        ints = twoSum(nums, target);
+        System.out.println("should be 3, 8 | " + printIntArray(ints));
 
 
     }
-}
 
-class Solution {
+    // SOLUTION
     public static int[] twoSum(int[] nums, int target) {
         List<Integer> listOfInt = Arrays.stream(nums).boxed().toList();
         return getIdx(listOfInt, target, 0);
