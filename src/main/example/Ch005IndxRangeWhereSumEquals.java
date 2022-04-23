@@ -29,10 +29,11 @@ public class Ch005IndxRangeWhereSumEquals {
 
         System.out.println("---------------------\n\n\n");
         System.out.println("found soln : " + soln + " -- for sum=" + givenNum);
-        if (soln.a != -1 && soln.b != -1) {
+        if (soln.a != -1 && soln.b != -1)
             listOfInt.subList(soln.a, soln.b + 1).forEach(System.out::println);
-        } else
+        else
             System.out.println("no soln found returning (-1,-1)");
+
         return soln;
     }
 
