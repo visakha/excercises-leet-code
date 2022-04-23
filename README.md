@@ -60,6 +60,17 @@ solution:
  see Ch005IndxRangeWhereSumEquals
  
 
+## 5. best-time-to-buy-and-sell-stock
+from leetCode
+    https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+requirement: 
+    see the link above in leetCode
+    
+solution: 
+ see Ch006BestTimeBuySellStock
+ 
+
 
 
 todo next
