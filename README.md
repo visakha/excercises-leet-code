@@ -79,7 +79,7 @@ requirement:
     see the link above in leetCode
     
 solution: 
- see Ch007ValidParen
+ this is in-complete : the solution in leetcode is much better, see Ch007ValidParen
  
 
 
