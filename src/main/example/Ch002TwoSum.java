@@ -1,6 +1,6 @@
 package example;
 // solving for https://leetcode.com/problems/two-sum/
-// given an array get the indexes who sum of values equals target
+// given an array get the indexes who sum of values equals target ...
 // we will use Arrays.stream( data ).boxed().toArray( Integer[]::new );
 //          from https://stackoverflow.com/questions/880581/how-can-i-convert-int-to-integer-in-java/27043087#27043087
 
